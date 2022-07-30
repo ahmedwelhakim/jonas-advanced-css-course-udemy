@@ -42,13 +42,14 @@ body {
 	color: white;
 	text-transform: uppercase;
 	position: absolute;
-	top: 33.7%;
+	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	text-align: center;
 }
 .heading-primary{
 
-	margin: 20px;
+	margin-bottom: 60px;
 }
 .heading-primary-main{
 
@@ -56,15 +57,103 @@ body {
 	font-weight: 400;
 	font-size: 60px;
 	letter-spacing: 35px;
+	animation-name: moveInLeft;
+	animation-duration: 1.5s;
+	margin-bottom: 20px;
 }
 .heading-primary-sub{
-	margin-top: 10px;
 	display: block;
 	font-weight: 700;
 	font-size:  20px;
 	letter-spacing: 17px;
+	animation-name: moveInRight;
+	animation-duration: 1.5s;
 }
-.heading-btn{
+
+@keyframes moveInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-150px);
+	}
+	80%{
+		transform: translateX(10px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes moveInRight{
+	0%{
+		opacity: 0;
+		transform: translateX(150px);
+	}
+	80%{
+		transform: translateX(-10px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+.btn:link,
+.btn:visited{
+	text-transform: uppercase;
+	text-decoration: none;	
+	padding: 20px 45px;
+	border-radius: 100px;
+	display: inline-block;
+	transition: all 200ms;
+	position: relative;
+}
+.btn:hover{
+	transform: translateY(-3px);
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+	
+}
+.btn:active{
+	transform: translateY(-1px);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-white{
+	background-color: white;
+	color: #777;
+	font-size: 15px;
+}
+.btn::after{
+	content: "";
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	border-radius: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 400ms;
+}
+.btn-white::after{
+	background-color: white;
+}
+.btn:hover::after{
+	transform: scaleX(1.4) scaleY(1.6);
+	opacity: 0;
+}
+.btn-animate{
+	animation: moveInUp 0.4s 1s backwards ease-in;
+}
+@keyframes moveInUp{
+	0%{
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+/*
+.btn{
 	position: absolute;
 	left: 50%;
 	margin-top: 50px;
@@ -78,3 +167,4 @@ body {
 	padding-right: 50px;
 
 }
+*/
