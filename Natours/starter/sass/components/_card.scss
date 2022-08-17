@@ -1,0 +1,115 @@
+.card {
+
+	height: 50rem;
+	position: relative;
+	perspective: 150rem;
+
+	&__side {
+		border-radius: .3rem;
+		overflow: hidden;
+		height: 50rem;
+		position: absolute;
+		width: 100%;
+		transition: all 1.2s ease;
+		backface-visibility: hidden;
+		box-shadow: 0 1.5rem 5rem rgba($color-black, 0.2);
+
+		&--front {
+			top: 0;
+			background-color: $color-white;
+		}
+
+		&--back {
+			top: 0;
+			transform: rotateY(-180deg);
+
+			&--1 {
+				background: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+			}
+
+			&--2 {
+				background: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+			}
+
+			&--3 {
+				background: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+			}
+
+
+		}
+
+
+	}
+
+	&:hover &__side {
+		&--front {
+			transform: rotateY(180deg);
+		}
+
+		&--back {
+			transform: rotateY(0);
+		}
+
+	}
+
+	&__image {
+		background-size: cover;
+		height: 23rem;
+		background-blend-mode: screen;
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+		&--1 {
+			background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+				url("../../img/nat-5.jpg");
+		}
+
+		&--2 {
+			background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+				url("../../img/nat-6.jpg");
+		}
+
+		&--3 {
+			background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+				url("../../img/nat-7.jpg");
+		}
+	}
+
+	text-align: right;
+
+	&__heading {
+		text-transform: uppercase;
+		display: inline-block;
+		font-size: 2.7rem;
+		font-weight: 300;
+		position: absolute;
+		top: 25%;
+		right: 0;
+		color: white;
+		margin-right: 2rem;
+	}
+
+	&__heading-span {
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+		padding: 1rem 2rem;
+
+		&--1 {
+			background: linear-gradient(to right bottom,
+					rgba($color-secondary-light, 0.8),
+					rgba($color-secondary-dark, 0.8));
+		}
+
+		&--2 {
+			background: linear-gradient(to right bottom,
+					rgba($color-primary-light, 0.8),
+					rgba($color-primary-dark, 0.8));
+		}
+
+		&--3 {
+			background: linear-gradient(to right bottom,
+					rgba($color-tertiary-light, 0.8),
+					rgba($color-tertiary-dark, 0.8));
+		}
+
+	}
+}
