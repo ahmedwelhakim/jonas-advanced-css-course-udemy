@@ -1,16 +1,16 @@
 .card {
 
-	height: 50rem;
+	height: 52rem;
 	position: relative;
 	perspective: 150rem;
 
 	&__side {
 		border-radius: .3rem;
 		overflow: hidden;
-		height: 50rem;
+		height: 52rem;
 		position: absolute;
 		width: 100%;
-		transition: all 1.2s ease;
+		transition: all 0.7s ease;
 		backface-visibility: hidden;
 		box-shadow: 0 1.5rem 5rem rgba($color-black, 0.2);
 
@@ -111,5 +111,25 @@
 					rgba($color-tertiary-dark, 0.8));
 		}
 
+	}
+
+	&__list {
+		margin-top: 3rem;
+		text-align: center;
+		text-decoration: none;
+		font-size: 1.5rem;
+		padding-left: 5rem;
+		padding-right: 5rem;
+
+		& li {
+			&:not(:last-child) {
+				border-bottom: 2px solid $color-grey-light;
+
+			}
+
+			padding: 1rem;
+			list-style: none;
+			text-decoration: none;
+		}
 	}
 }
