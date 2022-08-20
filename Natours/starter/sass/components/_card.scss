@@ -132,4 +132,28 @@
 			text-decoration: none;
 		}
 	}
+
+	&__details {
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+
+	}
+
+	&__price-box {
+		color: $color-white;
+	}
+
+	&__price-label {
+		font-size: $font-size-default;
+		text-transform: uppercase;
+	}
+
+	&__price-value {
+		font-size: 6rem;
+		font-weight: 200;
+	}
 }
