@@ -199,6 +199,9 @@ body {
   margin-top: -10rem;
   background-color: #F7F7F7; }
 
+.section-stories {
+  background-color: #F7F7F7; }
+
 .header {
   position: relative;
   height: 95vh;
@@ -232,6 +235,8 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+  .row:not(:last-child) {
+    margin-bottom: 7rem; }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -379,3 +384,53 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 200; }
+
+.story {
+  padding: 6rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  transform: skewX(-15deg);
+  box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.2); }
+  .story::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .story > * {
+    transform: skewX(15deg); }
+  .story__profile {
+    width: 15rem;
+    height: 15rem;
+    shape-outside: circle(50% at 50% 50%);
+    float: left;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 4rem; }
+  .story__img {
+    transform: translateX(-4rem) scale(1.4);
+    height: 100%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    overflow: hidden;
+    backface-visibility: hidden; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    transition: all 0.5s;
+    text-transform: uppercase;
+    width: 20%;
+    color: #F7F7F7;
+    opacity: 0;
+    text-align: center; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    filter: blur(1rem);
+    transform: translateX(-4rem) scale(1); }
+  .story__content {
+    transform: skewX(15deg); }
