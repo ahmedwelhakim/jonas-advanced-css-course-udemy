@@ -42,7 +42,8 @@
 		transform: translate(-50%, 100%);
 		transition: all 0.5s;
 		text-transform: uppercase;
-		width: 20%;
+		font-size: 1.7rem;
+		backface-visibility: hidden;
 		color: $color-grey-light;
 		opacity: 0;
 		text-align: center;
@@ -54,7 +55,7 @@
 	}
 
 	&:hover &__img {
-		filter: blur(1rem);
+		filter: blur(0.3rem) brightness(80%);
 		transform: translateX(-4rem) scale(1);
 
 	}

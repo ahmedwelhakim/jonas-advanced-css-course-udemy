@@ -200,7 +200,9 @@ body {
   background-color: #F7F7F7; }
 
 .section-stories {
-  background-color: #F7F7F7; }
+  padding: 15rem 0;
+  position: relative;
+  overflow: hidden; }
 
 .header {
   position: relative;
@@ -422,7 +424,8 @@ body {
     transform: translate(-50%, 100%);
     transition: all 0.5s;
     text-transform: uppercase;
-    width: 20%;
+    font-size: 1.7rem;
+    backface-visibility: hidden;
     color: #F7F7F7;
     opacity: 0;
     text-align: center; }
@@ -430,7 +433,18 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%); }
   .story:hover .story__img {
-    filter: blur(1rem);
+    filter: blur(0.3rem) brightness(80%);
     transform: translateX(-4rem) scale(1); }
   .story__content {
     transform: skewX(15deg); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.2;
+  z-index: -1; }
