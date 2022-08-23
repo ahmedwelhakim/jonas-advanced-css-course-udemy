@@ -3,6 +3,10 @@
 
 	&:hover &__photo:not(:hover) {
 		transform: scale(0.9);
+
+		@include respond(tab-port) {
+			transform: scale(1);
+		}
 	}
 
 	&__photo {
@@ -14,19 +18,41 @@
 		outline-offset: 2rem;
 		border-radius: 2px;
 
+		@include respond(tab-port) {
+			float: left;
+			width: 33.3333%;
+			position: relative;
+			box-shadow: 0 1.5rem 2rem rgba($color-black, 0.2);
+		}
+
 		&--p1 {
 			left: 0;
 			top: -2rem;
+
+			@include respond(tab-port) {
+				top: 0;
+			}
 		}
 
 		&--p2 {
 			right: 0rem;
 			top: 3rem;
+
+			@include respond(tab-port) {
+				top: -0.5rem;
+				transform: scale(1.2);
+				z-index: 15;
+			}
 		}
 
 		&--p3 {
 			left: 10rem;
 			top: 10rem;
+
+			@include respond(tab-port) {
+				top: 0;
+				left: 0;
+			}
 		}
 
 		&:hover {
@@ -34,6 +60,12 @@
 			z-index: 20;
 			outline: 1.2rem solid $color-primary;
 			box-shadow: 0 3rem 5rem rgba($color-black, 0.5);
+
+			@include respond(tab-port) {
+				transform: scale(1.1) translateY(-1rem);
+				outline: 0.8rem solid $color-primary;
+				outline-offset: 1.2rem;
+			}
 		}
 
 	}

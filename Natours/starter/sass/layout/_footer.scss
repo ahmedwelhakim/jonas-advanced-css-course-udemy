@@ -7,6 +7,10 @@
 	&__logo-box {
 		text-align: center;
 		margin-bottom: 8rem;
+
+		@include respond(tab-port) {
+			margin-bottom: 6rem;
+		}
 	}
 
 	&__logo {
@@ -22,6 +26,10 @@
 		text-align: left;
 		list-style: none;
 		font-size: 1.4rem;
+
+		@include respond(tab-port) {
+			text-align: center;
+		}
 	}
 
 	&__list-item {
@@ -61,5 +69,9 @@
 		float: right;
 		font-size: 1.4rem;
 		color: $color-grey-light;
+
+		@include respond(tab-port) {
+			width: 100%;
+		}
 	}
 }

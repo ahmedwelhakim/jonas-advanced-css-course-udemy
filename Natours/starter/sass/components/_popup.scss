@@ -46,11 +46,22 @@
 		transition: all 0.5s 0.4s;
 		opacity: 0;
 		transform: translate(-50%, -50%) scale(0.5);
+
+
 	}
 
 	&__left {
 		width: 33.3333333%;
 		display: table-cell;
+		vertical-align: middle;
+
+		@include respond(tab-land) {
+			display: none;
+		}
+
+		@include respond(tab-port) {
+			display: none;
+		}
 	}
 
 	&__img {

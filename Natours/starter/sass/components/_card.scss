@@ -34,11 +34,7 @@
 			&--3 {
 				background: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
 			}
-
-
 		}
-
-
 	}
 
 	&:hover &__side {
@@ -49,7 +45,6 @@
 		&--back {
 			transform: rotateY(0);
 		}
-
 	}
 
 	&__image {
@@ -145,6 +140,7 @@
 
 	&__price-box {
 		color: $color-white;
+		margin-bottom: 10rem;
 	}
 
 	&__price-label {
@@ -155,5 +151,65 @@
 	&__price-value {
 		font-size: 6rem;
 		font-weight: 200;
+	}
+
+	@include respond(tab-port) {
+		height: auto;
+
+		background-color: $color-white;
+
+		&__side {
+			height: auto;
+			position: relative;
+			width: 100%;
+			box-shadow: none;
+			transition: all 0s;
+
+			&--front {
+
+				background-color: $color-white;
+			}
+
+			&--back {
+				transform: rotateY(0);
+				clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+			}
+
+		}
+
+		&:hover &__side {
+			&--front {
+				transform: rotateY(0);
+			}
+
+			&--back {
+				transform: rotateY(0);
+			}
+
+		}
+
+		&__list {
+			padding-bottom: 3rem;
+		}
+
+		&__details {
+			position: relative;
+			left: 0;
+			top: 0;
+			transform: translate(0);
+			width: 100%;
+			padding: 7rem 4rem 4rem 4rem;
+		}
+
+		&__price-box {
+			color: $color-white;
+			margin-bottom: 3rem;
+		}
+
+
+		&__price-value {
+			font-size: 4rem;
+			font-weight: 200;
+		}
 	}
 }

@@ -8,8 +8,18 @@
 	box-shadow: 0 3rem 4rem rgba($color-black, 0.2);
 	@include clearfix;
 
+	@include respond(tab-port) {
+		width: 100%;
+		padding: 5rem;
+		transform: skewX(0);
+	}
+
 	&>* {
 		transform: skewX(15deg);
+
+		@include respond(tab-port) {
+			transform: skewX(0);
+		}
 	}
 
 	&__profile {
@@ -62,5 +72,9 @@
 
 	&__content {
 		transform: skewX(15deg);
+
+		@include respond(tab-port) {
+			transform: skewX(0);
+		}
 	}
 }

@@ -1,5 +1,5 @@
 .form {
-	width: 50%;
+
 	//font: inherit;
 
 	&__group:not(:last-child) {
@@ -17,6 +17,10 @@
 		width: 80%;
 		border-bottom: 3px solid transparent;
 		transition: all 0.3s;
+
+		@include respond(tab-port) {
+			width: 80%;
+		}
 
 		&:focus {
 			outline: none;
@@ -56,6 +60,12 @@
 		font-size: 1.4rem;
 		width: 49%;
 		display: inline-block;
+
+		@include respond(tab-port) {
+			display: block;
+			width: 100%;
+			margin-bottom: 1.5rem;
+		}
 
 	}
 
