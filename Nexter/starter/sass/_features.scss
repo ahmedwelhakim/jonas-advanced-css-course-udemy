@@ -1,4 +1,28 @@
 .features {
+	margin: 15rem 0;
 	grid-column: center-start / center-end;
+	display: grid;
+	gap: 6rem;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
 
+.feature {
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	column-gap: 2.5rem;
+	row-gap: 1rem;
+	align-items: center;
+
+	&__icon {
+		align-self: flex-start;
+		width: 4.5rem;
+		height: 4.5rem;
+		grid-row: 1 / span 2;
+		fill: $color-primary;
+		transform: translateY(-1rem);
+	}
+
+	&__text {
+		font-size: 1.7rem;
+	}
 }
